@@ -1,10 +1,10 @@
 {
   "name": "coffeelint-internal-variable-names-usage",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "A custom coffeelint rule to check usage of compiler's internal variable names, BC in CoffeeScript 1.9.0",
   "main": "index.js",
   "scripts": {
-    "test": "mocha --compilers coffee:coffee-script/register test/*.coffee"
+    "test": "mocha --compilers coffee:coffeescript/register test/*.coffee"
   },
   "repository": {
     "type": "git",
@@ -27,12 +27,12 @@
     "node": ">=0.8.0"
   },
   "peerDependencies": {
-    "coffeelint": "^1"
+    "coffeelint": "^2"
   },
   "devDependencies": {
     "chai": "^1.6.0",
-    "coffee-script": "^1.7.1",
-    "coffeelint": "^1.5.1",
+    "coffeescript": "^2.0.0",
+    "coffeelint": "^2.0.3",
     "gulp": "^3.6.2",
     "gulp-bump": "^0.1.8",
     "gulp-coffee": "^1.4.3",
