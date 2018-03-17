@@ -13,8 +13,13 @@ gulp.task 'compile', ->
     .pipe(gulp.dest('./src/'))
 
 gulp.task 'test', ['compile'], ->
-  gulp.src(test)
-    .pipe(mocha reporter: 'dot')
+  gulp
+    .src  test
+    .pipe mocha
+       reporter: 'dot'
+       require: [
+         'coffeescript/register'
+       ]
 
 gulp.task 'watch', ->
   gulp.watch([src, test], ['test'])
